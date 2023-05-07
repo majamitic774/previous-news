@@ -47,8 +47,8 @@ use News\Core\Auth; ?>
 
             <div class="col-md-4 mt-md-5">
                 <div class="text-center">
-                    <div class="card-body" style="">
-                        <img src="storage/images/img1.jpg" class="mx-auto d-blo img-fluid" width="100%" height="100px">
+                    <div class="card-body">
+                        <img src="storage/images/<?= $image ?>" class="mx-auto d-block img-fluid" width="100%" height="100px">
                     </div>
                 </div>
             </div>
