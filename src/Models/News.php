@@ -35,7 +35,7 @@ class News extends Model
     }
 
 
-    public function insert($body, $title, $category_id, $imageName)
+    public function insert($title, $body, $category_id, $imageName)
     {
         $conn = Database::createInstance();
         $sql = 'INSERT INTO news (title, body, category_id, image) VALUES (:title, :body, :category_id, :image)';
