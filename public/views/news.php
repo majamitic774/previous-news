@@ -21,7 +21,6 @@
         </div>
     </div>
 
-
     <div class="row">
         <?php foreach ($all_news as $news) : ?>
             <div class="col-md-4">
@@ -41,18 +40,19 @@
                                     <input type="hidden" name="id" value="<?= $news['id'] ?>">
                                     <?php if (false == $auth->isAdmin()) : ?>
                                     <?php else : ?>
-                                        <button type="submit" name="delete-news" class="btn btn-danger">delete</button><br />
+                                        <button type="submit" name="delete-news" class="btn btn-danger">delete</button>
                                     <?php endif; ?>
                                 <?php endif; ?>
                             </form>
                             <?php if ($auth != False && false == $auth->isAdmin()) : ?>
                             <?php else : ?>
-                                <a href="<?= BASE_URL ?>index.php?page=update-news&news_id=<?php echo $news['id'] ?>" class="btn btn-primary">edit</a>
+                                <a href="<?= BASE_URL ?>index.php?page=update-news&news_id=<?php echo $news['id'] ?>" class="btn btn-primary mx-1">edit</a>
                             <?php endif; ?>
                         </div>
                     </div>
                 </div>
             </div>
-        <?php endforeach;  ?>
+        <?php endforeach; ?>
     </div>
+
     <!-- and news  -->
