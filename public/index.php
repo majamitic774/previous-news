@@ -41,22 +41,6 @@ $_SESSION['token'] = $token;
 </html>
 <?php
 
-
-
-
-// use models\NewsModel;
-// use auth\Auth;
-// use controllers\CommentController;
-// use models\CommentModel;
-// use controllers\NewsController;
-// use controllers\UsersController;
-// use models\UserModel;
-
-// $auth = new Auth();
-// $newsController = new NewsController(new NewsModel());
-// $usersController = new UsersController(new UserModel(), $auth);
-// $commentController = new CommentController(new CommentModel());
-
 use News\Controllers\CommentController;
 use News\Models\News;
 use News\Models\User;

@@ -33,6 +33,7 @@ class Auth
         if (isset($_SESSION['email'])) {
             unset($_SESSION['email']);
         }
+        header('location: ' . BASE_URL . "index.php?page=usersLoginForm");
     }
     public function getLoggedInUser()
     {
