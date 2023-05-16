@@ -23,7 +23,7 @@ class Image
 
         if (in_array($fileActualExt, $allowed)) {
             if ($fileError === 0) {
-                if ($fileSize < 1000000) {
+                if ($fileSize < 5000000) {
                     $NameFile = uniqid() . "." . $fileActualExt;
                     $fileDestination = STORAGE . "images/$NameFile";
                     move_uploaded_file($fileTmpName, $fileDestination);
