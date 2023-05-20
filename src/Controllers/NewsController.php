@@ -51,7 +51,7 @@ class NewsController
         $body = $_POST['body'] ?? '';
         $category_id = $_POST['category_id'] ?? '';
 
-        if (empty($title) || empty($body) || empty($category_id)) {
+        if (empty($title) || empty($body) || empty($category_id) || strlen($title) > 255) {
             header('location: ' . BASE_URL . 'index.php?page=insertNewsForm');
             exit;
         }
