@@ -4,6 +4,8 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+      args:
+        - ENVIRONMENT=${ENVIRONMENT}
     image: news
     container_name: news-app
     restart: unless-stopped

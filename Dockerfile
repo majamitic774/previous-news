@@ -1,5 +1,7 @@
 FROM php:8.1-fpm
 
+ARG ENVIRONMENT
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     git \
@@ -21,6 +23,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Set working directory
 WORKDIR /var/www
+
+COPY php.ini.$ENVIRONMENT $PHP_INI_DIR/php.ini
 
 # Copy application files
 COPY . /var/www
